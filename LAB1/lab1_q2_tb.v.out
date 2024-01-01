@@ -1,0 +1,130 @@
+#! /opt/homebrew/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x15c804810 .scope module, "system2_tb" "system2_tb" 2 2;
+ .timescale 0 0;
+v0x15c815970_0 .net "outa", 0 0, L_0x15c816030;  1 drivers
+v0x15c815a00_0 .var "va", 0 0;
+v0x15c815ad0_0 .var "vb", 0 0;
+v0x15c815ba0_0 .var "vc", 0 0;
+S_0x15c804990 .scope module, "uut" "system2" 2 7, 3 14 0, S_0x15c804810;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "outa";
+    .port_info 1 /INPUT 1 "va";
+    .port_info 2 /INPUT 1 "vb";
+    .port_info 3 /INPUT 1 "vc";
+L_0x140040010 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_0x15c816030 .functor AND 1, L_0x15c815fc0, L_0x140040010, C4<1>, C4<1>;
+v0x15c815550_0 .net/2u *"_ivl_0", 0 0, L_0x140040010;  1 drivers
+v0x15c8155e0_0 .net "out", 0 0, L_0x15c815fc0;  1 drivers
+v0x15c815670_0 .net "outa", 0 0, L_0x15c816030;  alias, 1 drivers
+v0x15c815720_0 .net "va", 0 0, v0x15c815a00_0;  1 drivers
+v0x15c8157d0_0 .net "vb", 0 0, v0x15c815ad0_0;  1 drivers
+v0x15c8158a0_0 .net "vc", 0 0, v0x15c815ba0_0;  1 drivers
+S_0x15c804bb0 .scope module, "s1" "system1" 3 20, 3 1 0, S_0x15c804990;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "v1";
+    .port_info 2 /INPUT 1 "v2";
+    .port_info 3 /INPUT 1 "v3";
+L_0x15c815c70 .functor AND 1, v0x15c815a00_0, v0x15c815ad0_0, C4<1>, C4<1>;
+L_0x15c815ce0 .functor AND 1, v0x15c815ba0_0, v0x15c815ad0_0, C4<1>, C4<1>;
+L_0x15c815e10 .functor AND 1, v0x15c815a00_0, v0x15c815ba0_0, C4<1>, C4<1>;
+o0x140008010 .functor BUFZ 1, C4<z>; HiZ drive
+o0x140008040 .functor BUFZ 1, C4<z>; HiZ drive
+o0x140008070 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x15c815fc0 .functor OR 1, o0x140008010, o0x140008040, o0x140008070, C4<0>;
+v0x15c804df0_0 .net "g1", 0 0, o0x140008010;  0 drivers
+v0x15c814ea0_0 .net "g2", 0 0, o0x140008040;  0 drivers
+v0x15c814f40_0 .net "g3", 0 0, o0x140008070;  0 drivers
+v0x15c814ff0_0 .net "out", 0 0, L_0x15c815fc0;  alias, 1 drivers
+v0x15c815090_0 .net "v1", 0 0, v0x15c815a00_0;  alias, 1 drivers
+v0x15c815170_0 .net "v2", 0 0, v0x15c815ad0_0;  alias, 1 drivers
+v0x15c815210_0 .net "v3", 0 0, v0x15c815ba0_0;  alias, 1 drivers
+v0x15c8152b0_0 .net "w1", 0 0, L_0x15c815c70;  1 drivers
+v0x15c815350_0 .net "w2", 0 0, L_0x15c815ce0;  1 drivers
+v0x15c815460_0 .net "w3", 0 0, L_0x15c815e10;  1 drivers
+    .scope S_0x15c804810;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "lab1_q2_tb.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x15c804810 {0 0 0};
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815a00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815ad0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815ba0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 15 "$display", "Input: va=%b, vb=%b, vc=%b, output: outa=%b", v0x15c815a00_0, v0x15c815ad0_0, v0x15c815ba0_0, v0x15c815970_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815a00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815ad0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815ba0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 18 "$display", "Input: va=%b, vb=%b, vc=%b, output: outa=%b", v0x15c815a00_0, v0x15c815ad0_0, v0x15c815ba0_0, v0x15c815970_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815a00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815ad0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815ba0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 21 "$display", "Input: va=%b, vb=%b, vc=%b, output: outa=%b", v0x15c815a00_0, v0x15c815ad0_0, v0x15c815ba0_0, v0x15c815970_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815a00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815ad0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815ba0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 24 "$display", "Input: va=%b, vb=%b, vc=%b, output: outa=%b", v0x15c815a00_0, v0x15c815ad0_0, v0x15c815ba0_0, v0x15c815970_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815a00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815ad0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815ba0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 27 "$display", "Input: va=%b, vb=%b, vc=%b, output: outa=%b", v0x15c815a00_0, v0x15c815ad0_0, v0x15c815ba0_0, v0x15c815970_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815a00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815ad0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815ba0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 30 "$display", "Input: va=%b, vb=%b, vc=%b, output: outa=%b", v0x15c815a00_0, v0x15c815ad0_0, v0x15c815ba0_0, v0x15c815970_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815a00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815ad0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15c815ba0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 33 "$display", "Input: va=%b, vb=%b, vc=%b, output: outa=%b", v0x15c815a00_0, v0x15c815ad0_0, v0x15c815ba0_0, v0x15c815970_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815a00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815ad0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15c815ba0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 36 "$display", "Input: va=%b, vb=%b, vc=%b, output: outa=%b", v0x15c815a00_0, v0x15c815ad0_0, v0x15c815ba0_0, v0x15c815970_0 {0 0 0};
+    %vpi_call 2 38 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "lab1_q2_tb.v";
+    "./lab1_q2.v";

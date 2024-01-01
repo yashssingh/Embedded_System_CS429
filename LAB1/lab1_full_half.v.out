@@ -1,0 +1,133 @@
+#! /opt/homebrew/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x137e07720 .scope module, "full_adder_tb" "full_adder_tb" 2 18;
+ .timescale 0 0;
+v0x137e25f40_0 .var "a", 0 0;
+v0x137e26010_0 .var "b", 0 0;
+v0x137e260e0_0 .var "cin", 0 0;
+v0x137e261b0_0 .net "cout", 0 0, L_0x137e26750;  1 drivers
+v0x137e26240_0 .net "sum", 0 0, L_0x137e26570;  1 drivers
+S_0x137e0a060 .scope module, "uut" "full_adder" 2 22, 2 8 0, S_0x137e07720;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "sum";
+    .port_info 1 /OUTPUT 1 "cout";
+    .port_info 2 /INPUT 1 "a";
+    .port_info 3 /INPUT 1 "b";
+    .port_info 4 /INPUT 1 "cin";
+L_0x137e26750 .functor OR 1, L_0x137e263c0, L_0x137e26660, C4<0>, C4<0>;
+v0x137e25980_0 .net "a", 0 0, v0x137e25f40_0;  1 drivers
+v0x137e25a20_0 .net "b", 0 0, v0x137e26010_0;  1 drivers
+v0x137e25ad0_0 .net "c1", 0 0, L_0x137e263c0;  1 drivers
+v0x137e25ba0_0 .net "c2", 0 0, L_0x137e26660;  1 drivers
+v0x137e25c50_0 .net "cin", 0 0, v0x137e260e0_0;  1 drivers
+v0x137e25d20_0 .net "cout", 0 0, L_0x137e26750;  alias, 1 drivers
+v0x137e25db0_0 .net "s1", 0 0, L_0x137e26350;  1 drivers
+v0x137e25e80_0 .net "sum", 0 0, L_0x137e26570;  alias, 1 drivers
+S_0x137e0a1d0 .scope module, "ha1" "half_adder" 2 12, 2 1 0, S_0x137e0a060;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "sum";
+    .port_info 1 /OUTPUT 1 "carry";
+    .port_info 2 /INPUT 1 "a";
+    .port_info 3 /INPUT 1 "b";
+L_0x137e26350 .functor XOR 1, v0x137e25f40_0, v0x137e26010_0, C4<0>, C4<0>;
+L_0x137e263c0 .functor AND 1, v0x137e25f40_0, v0x137e26010_0, C4<1>, C4<1>;
+v0x137e08cf0_0 .net "a", 0 0, v0x137e25f40_0;  alias, 1 drivers
+v0x137e25210_0 .net "b", 0 0, v0x137e26010_0;  alias, 1 drivers
+v0x137e252b0_0 .net "carry", 0 0, L_0x137e263c0;  alias, 1 drivers
+v0x137e25360_0 .net "sum", 0 0, L_0x137e26350;  alias, 1 drivers
+S_0x137e25460 .scope module, "ha2" "half_adder" 2 13, 2 1 0, S_0x137e0a060;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "sum";
+    .port_info 1 /OUTPUT 1 "carry";
+    .port_info 2 /INPUT 1 "a";
+    .port_info 3 /INPUT 1 "b";
+L_0x137e26570 .functor XOR 1, v0x137e260e0_0, L_0x137e26350, C4<0>, C4<0>;
+L_0x137e26660 .functor AND 1, v0x137e260e0_0, L_0x137e26350, C4<1>, C4<1>;
+v0x137e25690_0 .net "a", 0 0, v0x137e260e0_0;  alias, 1 drivers
+v0x137e25730_0 .net "b", 0 0, L_0x137e26350;  alias, 1 drivers
+v0x137e257f0_0 .net "carry", 0 0, L_0x137e26660;  alias, 1 drivers
+v0x137e258a0_0 .net "sum", 0 0, L_0x137e26570;  alias, 1 drivers
+    .scope S_0x137e07720;
+T_0 ;
+    %vpi_call 2 25 "$dumpfile", "half_full_adder.vcd" {0 0 0};
+    %vpi_call 2 26 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x137e07720 {0 0 0};
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e25f40_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e26010_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e260e0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 29 "$display", "Input: a=%b, b=%b, cin=%b, sum=%b, cout=%b", v0x137e25f40_0, v0x137e26010_0, v0x137e260e0_0, v0x137e26240_0, v0x137e261b0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e25f40_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e26010_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e260e0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 31 "$display", "Input: a=%b, b=%b, cin=%b, sum=%b, cout=%b", v0x137e25f40_0, v0x137e26010_0, v0x137e260e0_0, v0x137e26240_0, v0x137e261b0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e25f40_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e26010_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e260e0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 33 "$display", "Input: a=%b, b=%b, cin=%b, sum=%b, cout=%b", v0x137e25f40_0, v0x137e26010_0, v0x137e260e0_0, v0x137e26240_0, v0x137e261b0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e25f40_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e26010_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e260e0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 35 "$display", "Input: a=%b, b=%b, cin=%b, sum=%b, cout=%b", v0x137e25f40_0, v0x137e26010_0, v0x137e260e0_0, v0x137e26240_0, v0x137e261b0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e25f40_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e26010_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e260e0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 37 "$display", "Input: a=%b, b=%b, cin=%b, sum=%b, cout=%b", v0x137e25f40_0, v0x137e26010_0, v0x137e260e0_0, v0x137e26240_0, v0x137e261b0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e25f40_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e26010_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e260e0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 39 "$display", "Input: a=%b, b=%b, cin=%b, sum=%b, cout=%b", v0x137e25f40_0, v0x137e26010_0, v0x137e260e0_0, v0x137e26240_0, v0x137e261b0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e25f40_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e26010_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x137e260e0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 41 "$display", "Input: a=%b, b=%b, cin=%b, sum=%b, cout=%b", v0x137e25f40_0, v0x137e26010_0, v0x137e260e0_0, v0x137e26240_0, v0x137e261b0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e25f40_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e26010_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x137e260e0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 43 "$display", "Input: a=%b, b=%b, cin=%b, sum=%b, cout=%b", v0x137e25f40_0, v0x137e26010_0, v0x137e260e0_0, v0x137e26240_0, v0x137e261b0_0 {0 0 0};
+    %vpi_call 2 45 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "lab1_full_half.v";
