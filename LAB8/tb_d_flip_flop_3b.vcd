@@ -1,0 +1,70 @@
+$date
+	Mon Nov 27 23:21:39 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_d_flip_flop_3b $end
+$var wire 1 ! q $end
+$var reg 1 " clk $end
+$var reg 1 # d $end
+$var reg 1 $ preset $end
+$var reg 1 % reset $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # d $end
+$var wire 1 $ preset $end
+$var wire 1 % reset $end
+$var reg 1 ! q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+1"
+#10
+0"
+1#
+1%
+#15
+1!
+1"
+#20
+0"
+0#
+#25
+1"
+#30
+0"
+1#
+#35
+1"
+#40
+0!
+0"
+0%
+1$
+#45
+1"
+#50
+0"
+0#
+#55
+1"
+#60
+0"
+1%
+#65
+1"
+#70
+0"

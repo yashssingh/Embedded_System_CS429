@@ -1,0 +1,51 @@
+$date
+	Mon Nov 27 23:04:32 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module swap $end
+$var reg 2 ! A [1:0] $end
+$var reg 2 " B [1:0] $end
+$var reg 1 # clk $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+b1 "
+b0 !
+$end
+#5
+b1 !
+b0 "
+1#
+#10
+0#
+#15
+b0 !
+b1 "
+1#
+#20
+0#
+#25
+b1 !
+b0 "
+1#
+#30
+0#
+#35
+b0 !
+b1 "
+1#
+#40
+0#
+#45
+b1 !
+b0 "
+1#
+#50
+0#
