@@ -1,0 +1,42 @@
+#! /opt/homebrew/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x127e08270 .scope module, "lab2" "lab2" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+o0x118040070 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x127e1caf0/d .functor NOT 1, o0x118040070, C4<0>, C4<0>, C4<0>;
+L_0x127e1caf0 .delay 1 (0,0,0) L_0x127e1caf0/d;
+o0x1180400d0 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x127e1cba0/d .functor NOT 1, o0x1180400d0, C4<0>, C4<0>, C4<0>;
+L_0x127e1cba0 .delay 1 (0,0,0) L_0x127e1cba0/d;
+L_0x127e1cce0 .functor NOT 1, L_0x127e1cba0, C4<0>, C4<0>, C4<0>;
+L_0x127e1ce20/d .functor AND 1, o0x118040070, L_0x127e1cce0, C4<1>, C4<1>;
+L_0x127e1ce20 .delay 1 (1,1,1) L_0x127e1ce20/d;
+L_0x127e1cf70 .functor NOT 1, L_0x127e1caf0, C4<0>, C4<0>, C4<0>;
+L_0x127e1d0b0/d .functor AND 1, L_0x127e1cf70, o0x1180400d0, C4<1>, C4<1>;
+L_0x127e1d0b0 .delay 1 (1,1,1) L_0x127e1d0b0/d;
+L_0x127e1d1a0/d .functor OR 1, L_0x127e1ce20, L_0x127e1d0b0, C4<0>, C4<0>;
+L_0x127e1d1a0 .delay 1 (2,2,2) L_0x127e1d1a0/d;
+v0x127e087f0_0 .net *"_ivl_4", 0 0, L_0x127e1cce0;  1 drivers
+v0x127e1c500_0 .net *"_ivl_8", 0 0, L_0x127e1cf70;  1 drivers
+v0x127e1c5a0_0 .net "a", 0 0, o0x118040070;  0 drivers
+v0x127e1c650_0 .net "a_bar", 0 0, L_0x127e1caf0;  1 drivers
+v0x127e1c6e0_0 .net "b", 0 0, o0x1180400d0;  0 drivers
+v0x127e1c7c0_0 .net "b_bar", 0 0, L_0x127e1cba0;  1 drivers
+v0x127e1c860_0 .net "out", 0 0, L_0x127e1d1a0;  1 drivers
+v0x127e1c900_0 .net "w1", 0 0, L_0x127e1ce20;  1 drivers
+v0x127e1c9a0_0 .net "w2", 0 0, L_0x127e1d0b0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "lab2.v";

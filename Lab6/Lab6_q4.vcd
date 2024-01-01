@@ -1,0 +1,54 @@
+$date
+	Tue Oct 31 12:49:04 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Lab6_q4_tb $end
+$var wire 1 ! Q $end
+$var reg 1 " Data $end
+$var reg 1 # Read $end
+$var reg 1 $ Write $end
+$scope module uwu $end
+$var wire 1 " Data $end
+$var wire 1 ! Q $end
+$var wire 1 # Read $end
+$var wire 1 $ Write $end
+$var wire 1 % nQ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+z%
+0$
+0#
+0"
+z!
+$end
+#10
+1"
+1!
+0%
+1$
+#20
+1#
+z!
+z%
+0$
+#30
+0#
+#40
+0"
+0!
+1%
+1$
+#50
+1#
+z!
+z%
+0$
+#60

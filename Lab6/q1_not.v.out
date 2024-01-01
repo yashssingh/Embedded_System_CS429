@@ -1,0 +1,55 @@
+#! /opt/homebrew/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x129607a40 .scope module, "Not_gate_tb" "Not_gate_tb" 2 8;
+ .timescale 0 0;
+v0x12961b7c0_0 .var "x", 0 0;
+RS_0x1300280a0 .resolv tri, L_0x12961ba40, L_0x12961bb90;
+v0x12961b870_0 .net8 "y", 0 0, RS_0x1300280a0;  2 drivers, strength-aware
+S_0x12960b640 .scope module, "uwu" "Not_gate" 2 11, 2 2 0, S_0x129607a40;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "x";
+    .port_info 1 /OUTPUT 1 "y";
+L_0x12961b9b0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x12961ba40 .functor PMOS 1, L_0x12961b9b0, v0x12961b7c0_0, C4<0>, C4<0>;
+L_0x12961b920 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x12961bb90 .functor NMOS 1, L_0x12961b920, v0x12961b7c0_0, C4<0>, C4<0>;
+v0x12960b7b0_0 .net8 "gnd", 0 0, L_0x12961b920;  1 drivers, strength-aware
+v0x12961b5c0_0 .net8 "vdd", 0 0, L_0x12961b9b0;  1 drivers, strength-aware
+v0x12961b660_0 .net "x", 0 0, v0x12961b7c0_0;  1 drivers
+v0x12961b6f0_0 .net8 "y", 0 0, RS_0x1300280a0;  alias, 2 drivers, strength-aware
+    .scope S_0x129607a40;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "Lab6_q1_not.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x129607a40 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x12961b7c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x12961b7c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x12961b7c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x12961b7c0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 19 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x129607a40;
+T_1 ;
+    %vpi_call 2 22 "$monitor", "x = %b, y = %b", v0x12961b7c0_0, v0x12961b870_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "q1_not.v";

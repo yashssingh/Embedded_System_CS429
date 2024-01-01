@@ -1,0 +1,65 @@
+$date
+	Mon Oct  9 22:38:52 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux_udp_tb $end
+$var wire 1 ! out $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ c $end
+$var reg 1 % d $end
+$var reg 1 & sel0 $end
+$var reg 1 ' sel1 $end
+$scope module obj $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % d $end
+$var wire 1 ! out $end
+$var wire 1 & sel0 $end
+$var wire 1 ' sel1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0'
+0&
+1%
+1$
+0#
+0"
+0!
+$end
+#10
+1!
+1"
+#20
+0!
+0"
+1'
+#30
+1!
+1#
+#40
+0!
+0$
+0#
+0'
+1&
+#50
+1!
+1$
+#60
+0!
+0%
+1'
+#70
+1!
+1%
+#80

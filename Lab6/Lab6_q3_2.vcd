@@ -1,0 +1,98 @@
+$date
+	Sun Oct 29 23:16:39 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux4to1_tb $end
+$var wire 1 ! out $end
+$var reg 1 " i0 $end
+$var reg 1 # i1 $end
+$var reg 1 $ i2 $end
+$var reg 1 % i3 $end
+$var reg 1 & s0 $end
+$var reg 1 ' s1 $end
+$scope module u1 $end
+$var wire 1 " i0 $end
+$var wire 1 # i1 $end
+$var wire 1 $ i2 $end
+$var wire 1 % i3 $end
+$var wire 1 ! out $end
+$var wire 1 ( out0 $end
+$var wire 1 ) out1 $end
+$var wire 1 & s0 $end
+$var wire 1 ' s1 $end
+$scope module u1 $end
+$var wire 1 " i0 $end
+$var wire 1 # i1 $end
+$var wire 1 ( out $end
+$var wire 1 & s $end
+$var wire 1 * sbar $end
+$upscope $end
+$scope module u2 $end
+$var wire 1 $ i0 $end
+$var wire 1 % i1 $end
+$var wire 1 ) out $end
+$var wire 1 & s $end
+$var wire 1 + sbar $end
+$upscope $end
+$scope module u3 $end
+$var wire 1 ( i0 $end
+$var wire 1 ) i1 $end
+$var wire 1 ! out $end
+$var wire 1 ' s $end
+$var wire 1 , sbar $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1,
+1+
+1*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1!
+1(
+1"
+#20
+0*
+0+
+1#
+0"
+1!
+1(
+1&
+#30
+0,
+1*
+1+
+1)
+1$
+0#
+1'
+1!
+0(
+0&
+#40
+0*
+0+
+1%
+0$
+1!
+1)
+1&
+#50

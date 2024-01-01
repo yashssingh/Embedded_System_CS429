@@ -1,0 +1,138 @@
+$date
+	Mon Oct  9 23:09:25 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module RippleCarryAdder_tb $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " carry $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$scope module UWU $end
+$var wire 4 % a [3:0] $end
+$var wire 4 & b [3:0] $end
+$var wire 4 ' sum [3:0] $end
+$var wire 1 " carry $end
+$var wire 1 ( c3 $end
+$var wire 1 ) c2 $end
+$var wire 1 * c1 $end
+$scope module FA0 $end
+$var wire 1 + a $end
+$var wire 1 , b $end
+$var wire 1 - c $end
+$var wire 1 * carry $end
+$var wire 1 . sum $end
+$upscope $end
+$scope module FA1 $end
+$var wire 1 / a $end
+$var wire 1 0 b $end
+$var wire 1 * c $end
+$var wire 1 ) carry $end
+$var wire 1 1 sum $end
+$upscope $end
+$scope module FA2 $end
+$var wire 1 2 a $end
+$var wire 1 3 b $end
+$var wire 1 ) c $end
+$var wire 1 ( carry $end
+$var wire 1 4 sum $end
+$upscope $end
+$scope module FA3 $end
+$var wire 1 5 a $end
+$var wire 1 6 b $end
+$var wire 1 ( c $end
+$var wire 1 " carry $end
+$var wire 1 7 sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+07
+06
+05
+04
+03
+02
+11
+10
+0/
+1.
+0-
+0,
+1+
+0*
+0)
+0(
+b11 '
+b10 &
+b1 %
+b10 $
+b1 #
+0"
+b11 !
+$end
+#10
+14
+b1111 !
+b1111 '
+17
+1,
+0+
+12
+15
+b11 $
+b11 &
+b1100 #
+b1100 %
+#20
+0,
+00
+1+
+1/
+b0 $
+b0 &
+b1111 #
+b1111 %
+#30
+1)
+1(
+01
+14
+0.
+b1100 !
+b1100 '
+17
+10
+13
+0+
+05
+b110 $
+b110 &
+b110 #
+b110 %
+#40
+1(
+1*
+1)
+01
+04
+b0 !
+b0 '
+07
+1"
+1,
+1+
+0/
+02
+15
+b111 $
+b111 &
+b1001 #
+b1001 %
+#50

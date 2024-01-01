@@ -1,0 +1,51 @@
+$date
+	Mon Oct 16 22:58:23 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module n_bit_adder_tb $end
+$var wire 4 ! c [3:0] $end
+$var reg 3 " a [2:0] $end
+$var reg 3 # b [2:0] $end
+$scope module obj $end
+$var wire 3 $ a [2:0] $end
+$var wire 3 % b [2:0] $end
+$var wire 4 & c [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1001 &
+b100 %
+b101 $
+b100 #
+b101 "
+b1001 !
+$end
+#10
+b11 #
+b11 %
+b110 !
+b110 &
+b11 "
+b11 $
+#20
+b10 #
+b10 %
+b1001 !
+b1001 &
+b111 "
+b111 $
+#30
+b111 #
+b111 %
+b1000 !
+b1000 &
+b1 "
+b1 $
+#40

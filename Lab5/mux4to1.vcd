@@ -1,0 +1,57 @@
+$date
+	Mon Oct 16 23:12:22 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module q2_a_tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 8 " i0 [7:0] $end
+$var reg 8 # i1 [7:0] $end
+$var reg 8 $ i2 [7:0] $end
+$var reg 8 % i3 [7:0] $end
+$var reg 2 & s [1:0] $end
+$scope module uut $end
+$var wire 8 ' i0 [7:0] $end
+$var wire 8 ( i1 [7:0] $end
+$var wire 8 ) i2 [7:0] $end
+$var wire 8 * i3 [7:0] $end
+$var wire 2 + s [1:0] $end
+$var reg 8 , y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 ,
+b0 +
+b110011 *
+b100010 )
+b10001 (
+b0 '
+b0 &
+b110011 %
+b100010 $
+b10001 #
+b0 "
+b0 !
+$end
+#10
+b10001 !
+b10001 ,
+b1 &
+b1 +
+#20
+b100010 !
+b100010 ,
+b10 &
+b10 +
+#30
+b110011 !
+b110011 ,
+b11 &
+b11 +
+#41

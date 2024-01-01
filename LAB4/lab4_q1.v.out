@@ -1,0 +1,48 @@
+#! /opt/homebrew/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x153904170 .scope module, "lab4_q1_udp" "lab4_q1_udp" 2 21;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "sel0";
+    .port_info 2 /INPUT 1 "sel1";
+    .port_info 3 /INPUT 1 "a";
+    .port_info 4 /INPUT 1 "b";
+    .port_info 5 /INPUT 1 "c";
+    .port_info 6 /INPUT 1 "d";
+UDP_mux_udp .udp/comb "mux_udp", 6
+ ,"000???0"
+ ,"001???1"
+ ,"01?0??0"
+ ,"01?1??1"
+ ,"10??0?0"
+ ,"10??1?1"
+ ,"11???00"
+ ,"11???11"
+ ,"?x????x"
+ ,"x?????x";
+o0x138008100 .functor BUFZ 1, C4<z>; HiZ drive
+o0x138008130 .functor BUFZ 1, C4<z>; HiZ drive
+o0x138008010 .functor BUFZ 1, C4<z>; HiZ drive
+o0x138008040 .functor BUFZ 1, C4<z>; HiZ drive
+o0x138008070 .functor BUFZ 1, C4<z>; HiZ drive
+o0x1380080a0 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x153914950 .udp UDP_mux_udp, o0x138008100, o0x138008130, o0x138008010, o0x138008040, o0x138008070, o0x1380080a0;
+v0x1539043e0_0 .net "a", 0 0, o0x138008010;  0 drivers
+v0x153914490_0 .net "b", 0 0, o0x138008040;  0 drivers
+v0x153914530_0 .net "c", 0 0, o0x138008070;  0 drivers
+v0x1539145e0_0 .net "d", 0 0, o0x1380080a0;  0 drivers
+v0x153914680_0 .net "out", 0 0, L_0x153914950;  1 drivers
+v0x153914760_0 .net "sel0", 0 0, o0x138008100;  0 drivers
+v0x153914800_0 .net "sel1", 0 0, o0x138008130;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "lab4_q1.v";

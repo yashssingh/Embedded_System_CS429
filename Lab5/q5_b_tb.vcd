@@ -1,0 +1,162 @@
+$date
+	Mon Oct 16 23:03:51 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module q5_b_tb $end
+$var wire 6 ! out3 [5:0] $end
+$var wire 5 " out2 [4:0] $end
+$var wire 3 # out1 [2:0] $end
+$var reg 2 $ a1 [1:0] $end
+$var reg 4 % a2 [3:0] $end
+$var reg 5 & a3 [4:0] $end
+$var reg 2 ' b1 [1:0] $end
+$var reg 4 ( b2 [3:0] $end
+$var reg 5 ) b3 [4:0] $end
+$scope module g1 $end
+$var wire 2 * a1 [1:0] $end
+$var wire 4 + a2 [3:0] $end
+$var wire 5 , a3 [4:0] $end
+$var wire 2 - b1 [1:0] $end
+$var wire 4 . b2 [3:0] $end
+$var wire 5 / b3 [4:0] $end
+$var wire 6 0 out3 [5:0] $end
+$var wire 5 1 out2 [4:0] $end
+$var wire 3 2 out1 [2:0] $end
+$scope module g1 $end
+$var wire 2 3 a [1:0] $end
+$var wire 2 4 b [1:0] $end
+$var wire 3 5 out [2:0] $end
+$upscope $end
+$scope module g2 $end
+$var wire 4 6 a [3:0] $end
+$var wire 4 7 b [3:0] $end
+$var wire 5 8 out [4:0] $end
+$upscope $end
+$scope module g3 $end
+$var wire 5 9 a [4:0] $end
+$var wire 5 : b [4:0] $end
+$var wire 6 ; out [5:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b10 )
+b10 /
+b10 :
+b100 !
+b100 0
+b100 ;
+b10 &
+b10 ,
+b10 9
+b10 (
+b10 .
+b10 7
+b100 "
+b100 1
+b100 8
+b10 %
+b10 +
+b10 6
+b1 '
+b1 -
+b1 4
+b10 #
+b10 2
+b10 5
+b1 $
+b1 *
+b1 3
+#20
+b101 )
+b101 /
+b101 :
+b1010 !
+b1010 0
+b1010 ;
+b101 &
+b101 ,
+b101 9
+b101 (
+b101 .
+b101 7
+b1010 "
+b1010 1
+b1010 8
+b101 %
+b101 +
+b101 6
+b10 '
+b10 -
+b10 4
+b100 #
+b100 2
+b100 5
+b10 $
+b10 *
+b10 3
+#30
+b111 )
+b111 /
+b111 :
+b1110 !
+b1110 0
+b1110 ;
+b111 &
+b111 ,
+b111 9
+b111 (
+b111 .
+b111 7
+b1110 "
+b1110 1
+b1110 8
+b111 %
+b111 +
+b111 6
+b11 '
+b11 -
+b11 4
+b110 #
+b110 2
+b110 5
+b11 $
+b11 *
+b11 3
+#40

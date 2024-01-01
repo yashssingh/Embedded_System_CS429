@@ -1,0 +1,37 @@
+$date
+	Sun Oct 29 22:45:13 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Not_gate_tb $end
+$var wire 1 ! y $end
+$var reg 1 " x $end
+$scope module uwu $end
+$var wire 1 # gnd $end
+$var wire 1 $ vdd $end
+$var wire 1 " x $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1$
+0#
+0"
+1!
+$end
+#10
+0!
+1"
+#20
+1!
+0"
+#30
+0!
+1"
+#31

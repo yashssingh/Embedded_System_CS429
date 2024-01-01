@@ -1,0 +1,45 @@
+$date
+	Sun Oct 29 23:08:07 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Xor_gate_tb $end
+$var wire 1 ! f $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$scope module uwu $end
+$var wire 1 " a $end
+$var wire 1 $ anot $end
+$var wire 1 # b $end
+$var wire 1 % bnot $end
+$var wire 1 ! f $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1%
+1$
+0#
+0"
+0!
+$end
+#10
+0%
+1!
+1#
+#20
+0$
+1%
+1"
+1!
+0#
+#30
+0%
+0!
+1#
+#40

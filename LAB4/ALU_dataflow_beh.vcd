@@ -1,0 +1,65 @@
+$date
+	Mon Oct  9 22:57:25 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ALU_behavioral_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 4 " A [3:0] $end
+$var reg 3 # ALU_OP [2:0] $end
+$var reg 4 $ B [3:0] $end
+$scope module a1 $end
+$var wire 4 % A [3:0] $end
+$var wire 3 & ALU_OP [2:0] $end
+$var wire 4 ' B [3:0] $end
+$var reg 4 ( out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111 (
+b101 '
+b0 &
+b1010 %
+b101 $
+b0 #
+b1010 "
+b1111 !
+$end
+#10
+b101 !
+b101 (
+b1 #
+b1 &
+#20
+b1111 !
+b1111 (
+b10 #
+b10 &
+#30
+b0 !
+b0 (
+b11 #
+b11 &
+#40
+b100 #
+b100 &
+#50
+b101 #
+b101 &
+#60
+b100 !
+b100 (
+b110 #
+b110 &
+#70
+b101 !
+b101 (
+b111 #
+b111 &
+#80

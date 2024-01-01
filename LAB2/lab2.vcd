@@ -1,0 +1,62 @@
+$date
+	Fri Sep 29 13:48:00 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module lab2_tb $end
+$var wire 1 ! out $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$scope module obj $end
+$var wire 1 " a $end
+$var wire 1 $ a_bar $end
+$var wire 1 # b $end
+$var wire 1 % b_bar $end
+$var wire 1 ! out $end
+$var wire 1 & w1 $end
+$var wire 1 ' w2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x'
+x&
+1%
+1$
+0#
+0"
+x!
+$end
+#1
+0'
+0&
+#3
+0!
+#10
+0%
+1#
+#11
+1'
+#13
+1!
+#20
+1%
+0$
+0#
+1"
+#21
+1&
+0'
+#30
+0%
+1#
+#31
+0&
+#33
+0!
+#40

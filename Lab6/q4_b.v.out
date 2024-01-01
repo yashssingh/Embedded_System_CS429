@@ -1,0 +1,85 @@
+#! /opt/homebrew/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x133f05580 .scope module, "Lab6_q4_2_tb" "Lab6_q4_2_tb" 2 5;
+ .timescale 0 0;
+v0x133f1de70_0 .var "Data", 0 0;
+v0x133f1df00_0 .net8 "Q", 0 0, L_0x133f1e230;  1 drivers, strength-aware
+v0x133f1df90_0 .var "Read", 0 0;
+v0x133f1e060_0 .var "Write", 0 0;
+S_0x133f056f0 .scope module, "uwu" "SRAM_Cell" 2 8, 2 1 0, S_0x133f05580;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "Write";
+    .port_info 1 /INPUT 1 "Read";
+    .port_info 2 /INPUT 1 "Data";
+    .port_info 3 /OUTPUT 1 "Q";
+L_0x133f1e390 .functor NOT 1, v0x133f1de70_0, C4<0>, C4<0>, C4<0>;
+v0x133f0bc40_0 .net "Data", 0 0, v0x133f1de70_0;  1 drivers
+v0x133f1d770_0 .net8 "Q", 0 0, L_0x133f1e230;  alias, 1 drivers, strength-aware
+v0x133f1d810_0 .net "Read", 0 0, v0x133f1df90_0;  1 drivers
+v0x133f1d8c0_0 .net "Write", 0 0, v0x133f1e060_0;  1 drivers
+o0x1380400d0 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0x133f1d960_0 name=_ivl_0
+v0x133f1da50_0 .net *"_ivl_10", 0 0, L_0x133f1e400;  1 drivers
+v0x133f1db00_0 .net *"_ivl_2", 0 0, L_0x133f1e110;  1 drivers
+v0x133f1dbb0_0 .net *"_ivl_6", 0 0, L_0x133f1e390;  1 drivers
+o0x138040190 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0x133f1dc60_0 name=_ivl_8
+v0x133f1dd70_0 .net8 "nQ", 0 0, L_0x133f1e4c0;  1 drivers, strength-aware
+L_0x133f1e110 .functor MUXZ 1, L_0x133f1e4c0, o0x1380400d0, v0x133f1df90_0, C4<>;
+L_0x133f1e230 .functor MUXZ 1 [6 5], L_0x133f1e110, v0x133f1de70_0, v0x133f1e060_0, C4<>;
+L_0x133f1e400 .functor MUXZ 1, L_0x133f1e230, o0x138040190, v0x133f1df90_0, C4<>;
+L_0x133f1e4c0 .functor MUXZ 1 [6 5], L_0x133f1e400, L_0x133f1e390, v0x133f1e060_0, C4<>;
+    .scope S_0x133f05580;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "Lab6_q4_2.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x133f05580 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x133f1e060_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x133f1df90_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x133f1de70_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x133f1e060_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x133f1de70_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x133f1e060_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x133f1df90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x133f1df90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x133f1e060_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x133f1de70_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x133f1e060_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x133f1df90_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 18 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x133f05580;
+T_1 ;
+    %vpi_call 2 21 "$monitor", "At time %d, Write = %b, Read = %b, Data = %b, Q = %b", $time, v0x133f1e060_0, v0x133f1df90_0, v0x133f1de70_0, v0x133f1df00_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "q4_b.v";
